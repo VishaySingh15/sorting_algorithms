@@ -1,11 +1,11 @@
 #include "sort.h"
 #include <stdlib.h>
 
-/*
+/**
  * insertion_sort_list - sorts doubly linked list using insertion sort
  * @list: list to sort
  * Return: no return
- **/
+ */
 
 void insertion_sort_list(listint_t **list)
 {
@@ -41,12 +41,12 @@ void insertion_sort_list(listint_t **list)
 	}
 }
 
-/*
+/**
  * check_prev - checks all previous nodes
  * @list: list to sort
  * @next_node: list to check previous nodes
  * Return: no return
- **/
+ */
 
 void check_prev(listint_t **list, listint_t **next_node)
 {
@@ -69,10 +69,10 @@ void check_prev(listint_t **list, listint_t **next_node)
 			}
 			node->prev = node_prev->prev;
 			node->next = node_prev;
-                        node_prev->prev = node;
-                        node_prev->next = tmp;
+			node_prev->prev = node;
+			node_prev->next = tmp;
 			tmp->prev = node_prev;
-                        print_list(*list);
+			print_list(*list);
 		}
 		else
 		{
